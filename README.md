@@ -5,6 +5,7 @@
 **ADC:** Texas Instruments ADS131M04  
 **Framework:** Arduino (PlatformIO)  
 **Driver:** Imperial College Rocketry ADS131M04 Arduino Library - [Access them here](https://github.com/icl-rocketry/ADS131M04-Lib)
+
 **Status:** Bench prototype — build and hardware validation pending
 
 ## 1. Firmware Overview

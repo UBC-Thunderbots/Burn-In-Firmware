@@ -80,9 +80,9 @@ $$
 
 Where:
 
-- \(V_{\mathrm{REF}}\) is the ADC reference voltage.
-- \(G_{\mathrm{ADC}}\) is the internal ADC programmable gain.
-- The denominator \(2^{23}\) corresponds to the signed 24-bit conversion scale.
+- $V_{\mathrm{REF}}$ is the ADC reference voltage.
+- $G_{\mathrm{ADC}}$ is the internal programmable gain.
+- $V_{\mathrm{offset}}$ is the zero-current offset.
 
 The reference voltage and gain are defined in `config.h` and must correspond to the physical ADC configuration.
 
@@ -98,9 +98,9 @@ $$
 
 Where:
 
-- \(V_{\mathrm{offset}}\) is the measured zero-current differential offset.
-- \(G_{\mathrm{amp}}\) is the external current-sense amplifier gain.
-- \(R_{\mathrm{shunt}}\) is the shunt resistance.
+- $V_{\mathrm{offset}}$ is the measured zero-current differential offset.
+- $G_{\mathrm{amp}}$ is the external current-sense amplifier gain.
+- $R_{\mathrm{shunt}}$ is the shunt resistance.
 
 The firmware uses `readyCalibration()` during startup to verify that the required calibration parameters are enabled, finite and physically plausible.
 

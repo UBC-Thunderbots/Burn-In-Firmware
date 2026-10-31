@@ -72,9 +72,11 @@ The ADS131M04 provides signed 24-bit conversion results.
 
 The firmware converts each digital code into an estimated differential input voltage using the nominal ADC reference voltage and configured programmable gain.
 
-\[
-V_{\mathrm{ADC}}=\frac{\mathrm{ADC\ Code}}{2^{23}}\frac{V_{\mathrm{REF}}}{G_{\mathrm{ADC}}}
-\]
+
+$$
+V_{\mathrm{ADC}}=\frac{\mathrm{ADC\ Code}}{2^{23}}\cdot\frac{V_{\mathrm{REF}}}{G_{\mathrm{ADC}}}
+$$
+  
 
 Where:
 
@@ -90,9 +92,9 @@ Each phase current is measured using an inline shunt resistor and current-sense 
 
 The conditioned ADC voltage is converted into phase current using:
 
-\[
+$$
 I_{\mathrm{phase}}=\frac{V_{\mathrm{ADC}}-V_{\mathrm{offset}}}{G_{\mathrm{amp}}R_{\mathrm{shunt}}}
-\]
+$$
 
 Where:
 
@@ -118,9 +120,9 @@ For each accepted current sample, the firmware adds its square to a running sum.
 
 The RMS current is then calculated over the reporting interval:
 
-\[
+$$
 I_{\mathrm{RMS}}=\sqrt{\frac{1}{N}\sum_{n=1}^{N}I_n^2}
-\]
+$$
 
 A separate `validCount` counter tracks the number of accepted samples for each phase.
 
